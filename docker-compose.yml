@@ -1,0 +1,10 @@
+version: '3.2'
+services:
+  cypress:
+    image: cypress/included:3.4.0
+    command: 
+      npx cypress run
+    working_dir: /app
+    volumes:
+      - ./cypress:/app/cypress
+      - ./cypress.json:/app/cypress.json
